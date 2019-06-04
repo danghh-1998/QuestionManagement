@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="547.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ThongTinController">
+   <children>
+      <Label fx:id="label" layoutX="3.0" layoutY="14.0" prefHeight="85.0" prefWidth="541.0" text="Question Management - Phần mềm quản lý câu hỏi và xây dựng đề thi" textAlignment="RIGHT">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="textArea" editable="false" layoutY="122.0" prefHeight="378.0" prefWidth="547.0" text="Question Management là phần mềm giúp giáo viên quản lý câu hỏi và tạo đề thi&#10;Phần mềm có thể chạy trên tất cả máy tính Windows có máy ảo Java&#10;&#10;Các thành viên của dự án:&#10;1. Họ tên: Hoàng Hải Đăng&#10;MSSV: 20160982&#10;Lớp: SIC - Hệ thống thông tin và truyền thông - K61&#10;Trường: Đại học Bách Khoa Hà Nội&#10;2. Họ và tên: Nguyến Ngọc Nam&#10;MSSV: 20162826&#10;Lớp: SIC - Hệ thống thông tin và truyền thông - K61&#10;Trường: Đại học Bách Khoa Hà Nội&#10;3. Họ và tên: Lê Anh Hào&#10;MSSV: 20166042&#10;Lớp: SIC - Hệ thống thông tin và truyền thông - K61&#10;Trường: Đại học Bách Khoa Hà Nội&#10;&#10;Liên hệ: hoanghaidang1998@gmail.com&#10;             Ngngcnam@gmail.com&#10;             haotwentynine@gmail.com" wrapText="true" />
+   </children>
+</AnchorPane>

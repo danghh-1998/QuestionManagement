@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="604.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TaoDeThiBangTayController">
+   <children>
+      <ScrollPane layoutX="28.0" layoutY="60.0" prefHeight="452.0" prefWidth="284.0">
+         <content>
+            <TreeView fx:id="treeChuaChon" prefHeight="450.0" prefWidth="282.0" />
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="413.0" layoutY="60.0" prefHeight="452.0" prefWidth="284.0">
+         <content>
+            <TreeView fx:id="treeDaChon" prefHeight="450.0" prefWidth="282.0" />
+         </content>
+      </ScrollPane>
+      <Button fx:id="buttonThem" layoutX="339.0" layoutY="195.0" mnemonicParsing="false" onAction="#themCauHoi" text="Thêm" />
+      <Button fx:id="buttonLoaiBo" layoutX="336.0" layoutY="290.0" mnemonicParsing="false" onAction="#loaiBoCauHoi" text="Loại bỏ" />
+      <Button fx:id="buttonTaoDeThi" layoutX="214.0" layoutY="565.0" mnemonicParsing="false" onAction="#taoDeThi" text="Tạo đề thi" />
+      <Button fx:id="buttonHuyBo" layoutX="455.0" layoutY="565.0" mnemonicParsing="false" onAction="#huyBo" text="Hủy bỏ" />
+      <Label layoutX="28.0" layoutY="31.0" text="Danh sách câu hỏi" />
+      <Label layoutX="413.0" layoutY="31.0" text="Câu hỏi câu hỏi đã chọn" />
+      <Label layoutX="28.0" layoutY="529.0" text="Cách bố trí đề thi" />
+      <ChoiceBox fx:id="choiceBoxBoTri" layoutX="170.0" layoutY="525.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

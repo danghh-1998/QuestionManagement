@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="637.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.XemTracNghiemController">
+   <left>
+      <TreeView fx:id="treeTracNghiem" onMouseClicked="#hienThi" prefHeight="486.0" prefWidth="214.0" BorderPane.alignment="CENTER">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#themTracNghiem" text="Thêm câu hỏi" />
+                  <MenuItem mnemonicParsing="false" onAction="#chinhSuaTracNghiem" text="Sửa câu hỏi" />
+                  <MenuItem mnemonicParsing="false" onAction="#xoaTracNghiem" text="Xóa câu hỏi" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TreeView>
+   </left>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Câu hỏi">
+            <items>
+              <MenuItem fx:id="menuItemTuLuan" mnemonicParsing="false" onAction="#changeScene" text="Câu hỏi tự luận" />
+                  <MenuItem mnemonicParsing="false" text="Câu hỏi trắc nghiệm" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Đề thi">
+            <items>
+              <MenuItem fx:id="menuItemTaoDeThiNgauNhien" mnemonicParsing="false" onAction="#taoDeThiNgauNhien" text="Tạo ngẫu nhiên" />
+                  <MenuItem fx:id="menuItemTaoDeThiBangTay" mnemonicParsing="false" onAction="#taoDeThiBangTay" text="Tạo bằng tay" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Giúp đỡ">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#xemThongTin" text="Thông tin" />
+                  <MenuItem mnemonicParsing="false" onAction="#huongDanSuDung" text="Hướng dẫn sử dụng" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+            <AnchorPane prefHeight="596.0" prefWidth="543.0">
+               <children>
+                  <Label layoutX="24.0" layoutY="24.0" prefHeight="17.0" prefWidth="75.0" text="Môn học" />
+                  <Label layoutX="24.0" layoutY="55.0" prefHeight="17.0" prefWidth="74.0" text="Chương" />
+                  <ScrollPane layoutX="21.0" layoutY="81.0" prefHeight="125.0" prefWidth="489.0">
+                     <content>
+                        <ListView fx:id="listChuong" prefHeight="123.0" prefWidth="487.0" />
+                     </content>
+                  </ScrollPane>
+                  <Label layoutX="21.0" layoutY="218.0" prefHeight="17.0" prefWidth="74.0" text="Độ khó" />
+                  <TextField fx:id="textMonHoc" editable="false" layoutX="116.0" layoutY="20.0" prefHeight="25.0" prefWidth="395.0" />
+                  <Slider fx:id="sliderDoKho" disable="true" layoutX="116.0" layoutY="220.0" majorTickUnit="1.0" max="10.0" minorTickCount="0" prefHeight="14.0" prefWidth="395.0" showTickLabels="true" snapToTicks="true" value="5.0" />
+                  <Label layoutX="21.0" layoutY="251.0" prefHeight="17.0" prefWidth="74.0" text="Đề bài" />
+                  <TextArea fx:id="areaDeBai" editable="false" layoutX="21.0" layoutY="275.0" prefHeight="111.0" prefWidth="489.0" />
+                  <Label layoutX="21.0" layoutY="395.0" prefHeight="17.0" prefWidth="74.0" text="Đáp án" />
+                  <ScrollPane layoutX="24.0" layoutY="417.0" prefHeight="179.0" prefWidth="489.0">
+                     <content>
+                        <TableView fx:id="tableDapAn" editable="true" prefHeight="177.0" prefWidth="487.0">
+                          <columns>
+                            <TableColumn fx:id="colDapAn" prefWidth="418.0" text="Đáp án" />
+                            <TableColumn fx:id="colDungSai" prefWidth="69.0" text="Đúng" />
+                          </columns>
+                        </TableView>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

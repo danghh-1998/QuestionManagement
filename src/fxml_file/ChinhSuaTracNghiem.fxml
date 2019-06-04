@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="674.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChinhSuaTracNghiemController">
+   <children>
+      <Label layoutX="45.0" layoutY="33.0" prefHeight="17.0" prefWidth="137.0" text="Môn học" />
+      <TextField fx:id="textMonHoc" layoutX="200.0" layoutY="29.0" prefHeight="25.0" prefWidth="429.0" promptText="Nhập môn học" />
+      <Label layoutX="45.0" layoutY="70.0" prefHeight="17.0" prefWidth="137.0" text="Chương" />
+      <ScrollPane layoutX="45.0" layoutY="96.0" prefHeight="129.0" prefWidth="584.0">
+         <content>
+            <TableView fx:id="tableChuong" editable="true" prefHeight="127.0" prefWidth="582.0">
+              <columns>
+                <TableColumn fx:id="colChuong" prefWidth="581.0" text="Chuong" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Button fx:id="buttonThemChuong" layoutX="45.0" layoutY="235.0" mnemonicParsing="false" onAction="#themChuong" text="Thêm chương" />
+      <Label layoutX="45.0" layoutY="279.0" prefHeight="17.0" prefWidth="137.0" text="Độ khó" />
+      <Slider fx:id="sliderDoKho" layoutX="200.0" layoutY="281.0" majorTickUnit="1.0" max="10.0" minorTickCount="0" prefHeight="14.0" prefWidth="429.0" showTickLabels="true" snapToTicks="true" />
+      <Label layoutX="45.0" layoutY="313.0" prefHeight="17.0" prefWidth="137.0" text="Đề bài" />
+      <TextArea fx:id="areaDeBai" layoutX="45.0" layoutY="337.0" prefHeight="101.0" prefWidth="584.0" promptText="Nhập đề bài" />
+      <Button fx:id="buttonChinhSua" layoutX="182.0" layoutY="630.0" mnemonicParsing="false" onAction="#kiemTra" text="Chỉnh sửa" />
+      <Button fx:id="buttonHuyBo" layoutX="387.0" layoutY="630.0" mnemonicParsing="false" onAction="#huyBo" text="Hủy bỏ" />
+      <ScrollPane layoutX="45.0" layoutY="451.0" prefHeight="129.0" prefWidth="584.0">
+         <content>
+            <TableView fx:id="tableDapAn" prefHeight="127.0" prefWidth="582.0">
+              <columns>
+                <TableColumn fx:id="colDapAn" prefWidth="481.0" text="Đáp án" />
+                <TableColumn fx:id="colDungSai" minWidth="0.0" prefWidth="100.0" text="Đúng" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Button fx:id="buttonThemDapAn" layoutX="45.0" layoutY="586.0" mnemonicParsing="false" onAction="#themDapAn" text="Thêm đáp án" />
+   </children>
+</AnchorPane>

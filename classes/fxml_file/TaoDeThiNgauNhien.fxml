@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="628.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TaoDeThiNgauNhienController">
+   <children>
+      <Label layoutX="27.0" layoutY="29.0" text="Danh sách chương, môn học" />
+      <Label layoutX="410.0" layoutY="29.0" text="Danh sách chương, môn học đã chọn" />
+      <Button fx:id="buttonThem" layoutX="339.0" layoutY="156.0" mnemonicParsing="false" onAction="#themChuong" text="Thêm" />
+      <Button fx:id="buttonLoaiBo" layoutX="334.0" layoutY="237.0" mnemonicParsing="false" onAction="#loaiBoChuong" text="Loại bỏ" />
+      <ChoiceBox fx:id="choiceBoxDoKho" layoutX="135.0" layoutY="502.0" prefWidth="150.0" />
+      <Label layoutX="27.0" layoutY="506.0" text="Chọn độ khó" />
+      <Label layoutX="27.0" layoutY="547.0" text="Số lượng câu hỏi" />
+      <TextField fx:id="textSoLuong" layoutX="135.0" layoutY="543.0" />
+      <Button fx:id="buttonTaoDeThi" layoutX="184.0" layoutY="581.0" mnemonicParsing="false" onAction="#taoDeThi" text="Tạo đề thi" />
+      <Button fx:id="buttonHuyBo" layoutX="483.0" layoutY="581.0" mnemonicParsing="false" onAction="#huyBo" text="Hủy bỏ" />
+      <ScrollPane layoutX="27.0" layoutY="56.0" prefHeight="428.0" prefWidth="284.0">
+         <content>
+            <TreeView fx:id="treeChuaChon" prefHeight="426.0" prefWidth="282.0" />
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="411.0" layoutY="56.0" prefHeight="428.0" prefWidth="284.0">
+         <content>
+            <TreeView fx:id="treeDaChon" prefHeight="426.0" prefWidth="282.0" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="411.0" layoutY="506.0" text="Cách bố trí đề thi" />
+      <ChoiceBox fx:id="choiceBoxBoTri" layoutX="533.0" layoutY="502.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
